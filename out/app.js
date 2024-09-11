@@ -15,7 +15,7 @@ const io = new Server(server, {
 });
 io.on('connection', socket => {
     socket.on('message', message => {
-        console.log(`A user said: ${message}`);
+        console.log(`A player said: ${message}`);
         io.emit('message', message);
     });
 });
